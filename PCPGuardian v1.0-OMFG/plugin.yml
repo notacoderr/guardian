@@ -1,6 +1,6 @@
 name: PCPGuardian
 main: pcp\Main
-version: 1.0-OMFG
+version: 1.5-Enforced
 author: CodeBreaK
 api: [3.0.5, 3.0.6, 3.1.0, 4.0.0, 4.0.1]
 load: POSTWORLD

@@ -87,7 +87,6 @@ class Main extends PluginBase implements Listener
             {
                 $event->setCancelled();
                 $player->addTitle("§c§l" . $command[0], "§o§fIs banned in this world");
-                //$player->sendMessage("§7ERROR §c•>§l§f ".$command[0]." is unvailable in this world");
                 return true;
             }
         }
@@ -117,8 +116,13 @@ class Main extends PluginBase implements Listener
     {
         if($event->getPlayer()->isOp())
         {
-            $this->getServer()->broadcastMessage("§l§fAn §7[§cᴼᴾᴱᴿᴬᵀᴼᴿ§7]§f has joined the server");
-        } 
+            $this->getServer()->broadcastMessage("§l§fAn §7[§cᴼᴾᴱᴿᴬᵀᴼᴿ§7]§f has joined the server.");
+        } else {
+            if($event->getPlayer()->hasPermission("sakura.vip"))
+            {
+                $this->getServer()->broadcastMessage("§l§fBehold! a §cV§7IP §fentered the server.");
+            }
+        }
     }
     
     private function clean(Player $player) : void 

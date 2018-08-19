@@ -1,0 +1,35 @@
+#Anti-Void
+void-guard: true
+
+#Wipe player's inventory on world change if the target world is listed here.
+#Use lower characters on world folder name here (the ones in server/worlds/)
+worldchange-guard:
+  - sampleworld
+
+#Clears player's inventory on gamemode change (but ignores gamemode 2 // adventure)
+gamemode-guard: true
+
+#Cancel player's item drop if set to TRUE
+dropguard:
+  survival: false
+  creative: true
+  adventure: true
+ 
+#use lower characters on world folder name here (the ones in server/worlds/)
+banned:
+  sampleworld:
+    commands:
+      - /samplecommand
+      
+  extffa:
+    commands:
+      - /tp
+      - /suicide
+      - /ban
+      - /kick
+
+#Punish anyone who quits on world which is not listed here
+game:
+  guard: true
+  worlds:
+    - skyhub
